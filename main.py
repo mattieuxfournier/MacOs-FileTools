@@ -113,7 +113,6 @@ def png_to_apng(input_path: Path, output_folder: Path):
         print(f"Converted '{input_path.name}' -> '{output_path.name}'")
     except subprocess.CalledProcessError as e:
         print(f"Conversion failed: {e.stderr.decode('utf-8')}")
-
 def png_to_jpg(input_path: Path, output_folder: Path):
     output_path = output_folder / f"{input_path.stem}.jpg"
 
@@ -130,7 +129,6 @@ def png_to_jpg(input_path: Path, output_folder: Path):
         print(f"Converted '{input_path.name}' -> '{output_path.name}'")
     except subprocess.CalledProcessError as e:
         print(f"Conversion failed: {e.stderr.decode('utf-8')}")
-
 def png_to_jpeg(input_path: Path, output_folder: Path):
     output_path = output_folder / f"{input_path.stem}.jpeg"
 
@@ -147,613 +145,4855 @@ def png_to_jpeg(input_path: Path, output_folder: Path):
         print(f"Converted '{input_path.name}' -> '{output_path.name}'")
     except subprocess.CalledProcessError as e:
         print(f"Conversion failed: {e.stderr.decode('utf-8')}")
-        
 def png_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def png_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def png_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def png_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def png_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def png_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def png_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def png_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def png_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def png_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def png_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def png_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def png_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def png_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def apng_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpg_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jpeg_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def jfif_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjpeg_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def pjp_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def svg_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def webp_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def gif_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tif_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def tiff_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def bmp_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def eps_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def heic_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def avif_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def ico_to_cur(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.cur"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_png(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.png"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_jfif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jfif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_pjpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_pjp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.pjp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_svg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.svg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_webp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.webp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_gif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.gif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_tif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_tiff(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.tiff"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_bmp(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.bmp"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_eps(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.eps"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_heic(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.heic"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_avif(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.avif"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
 def cur_to_ico(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.ico"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
+
 
 # --- doc ---
 
