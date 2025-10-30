@@ -2,7 +2,9 @@
 import subprocess
 from pathlib import Path
 from itertools import permutations
+from wand.image import Image
 
+# --- File Type Mapping ---
 file_etx = {
     'img': ['.png', '.apng', '.jpg', '.jpeg', '.jfif', '.pjpeg', '.pjp', '.svg', '.webp', '.gif', '.tif', '.tiff', '.bmp', '.eps', '.heic', '.avif', '.ico', '.cur'],
     'doc': ['.asc', '.doc', '.docx', '.rtf', '.msg', '.pdf', '.txt', '.wpd', '.wps', '.csv', '.xlsx', '.json', '.html', '.htm', '.xhtml', '.asp', '.css', '.aspx', '.rss', '.pptx'],
@@ -13,18 +15,27 @@ file_etx = {
 # --- Functions ---
 
 def choose_file():
-    # Popup to select a file
-    script = 'set filePath to POSIX path of (choose file with prompt "Select a file:")'
+    """Open macOS file picker and return a Path object."""
+    script = 'set filePath to POSIX path of (choose file with prompt "Select a file:" of type {"public.item"})'
     result = subprocess.run(["osascript", "-e", script], capture_output=True, text=True)
     file_path = result.stdout.strip()
+
+    if result.returncode != 0 or file_path in ("false", ""):
+        print("No file selected.")
+        return None
+
     return Path(file_path)
 
+
 def detect_extension(ext):
-    # Detect if extension exists in exactly one category
-    count = sum(ext in extensions for extensions in file_etx.values())
+    """Check if the given extension exists in exactly one category."""
+    ext = ext.lower()
+    count = sum(ext in map(str.lower, exts) for exts in file_etx.values())
     return count == 1
 
+
 def choose_category_and_extension():
+    """Ask user to select a file category and corresponding extension."""
     keys = list(file_etx.keys())
     keys_str = ",".join([f'"{k}"' for k in keys])
 
@@ -34,8 +45,8 @@ def choose_category_and_extension():
     result = subprocess.run(["osascript", "-e", ask_category], capture_output=True, text=True)
     category = result.stdout.strip().strip(',').strip('"')
 
-    if category not in file_etx:
-        print("Cancelled or invalid category")
+    if result.returncode != 0 or category in ("false", "") or category not in file_etx:
+        print("Cancelled or invalid category.")
         return None, None
 
     extensions = file_etx[category]
@@ -47,20 +58,96 @@ def choose_category_and_extension():
     result = subprocess.run(["osascript", "-e", ask_ext], capture_output=True, text=True)
     extension = result.stdout.strip().strip(',').strip('"')
 
-    if extension not in file_etx[category]:
-        print("Cancelled or invalid extension")
+    if result.returncode != 0 or extension in ("false", "") or extension not in file_etx[category]:
+        print("Cancelled or invalid extension.")
         return None, None
 
     return category, extension
 
+
+def main():
+    print("Select a file to convert:")
+    input_path = choose_file()
+    if not input_path:
+        return
+
+    category, ext = choose_category_and_extension()
+    if not category or not ext:
+        return
+
+    # Build function name from extensions
+    source_ext = input_path.suffix.lstrip('.').lower()
+    target_ext = ext.lstrip('.').lower()
+    func_name = f"{source_ext}_to_{target_ext}"
+
+    print(f"\nSelected file: {input_path.name}")
+    print(f"Converting {source_ext} -> {target_ext} using '{func_name}()' ...")
+
+    # Execute conversion function dynamically
+    if func_name in globals():
+        output_folder = input_path.parent
+        try:
+            globals()[func_name](input_path, output_folder)
+            print(f"Conversion successful: {input_path.name} → .{target_ext}")
+        except Exception as e:
+            print(f"Error during conversion: {e}")
+    else:
+        print(f"Conversion function '{func_name}()' not found in this script.")
+
+
 # --- img ---
 
 def png_to_apng(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.apng"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
+
 def png_to_jpg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
+
 def png_to_jpeg(input_path: Path, output_folder: Path):
-    ...
+    output_path = output_folder / f"{input_path.stem}.jpeg"
+
+    cmd = [
+        "ffmpeg",
+        "-y",
+        "-i", str(input_path),
+        "-plays", "0",
+        str(output_path)
+    ]
+
+    try:
+        subprocess.run(cmd, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        print(f"Converted '{input_path.name}' -> '{output_path.name}'")
+    except subprocess.CalledProcessError as e:
+        print(f"Conversion failed: {e.stderr.decode('utf-8')}")
+        
 def png_to_jfif(input_path: Path, output_folder: Path):
     ...
 def png_to_pjpeg(input_path: Path, output_folder: Path):
@@ -1062,7 +1149,7 @@ def xlsx_to_rtf(input_path: Path, output_folder: Path):
 def xlsx_to_msg(input_path: Path, output_folder: Path):
     ...
 def xlsx_to_pdf(input_path: Path, output_folder: Path):
-    ...
+    print('success')
 def xlsx_to_txt(input_path: Path, output_folder: Path):
     ...
 def xlsx_to_wpd(input_path: Path, output_folder: Path):
@@ -1585,3 +1672,7 @@ def wmv_to_mpg(input_path: Path, output_folder: Path):
     ...
 def wmv_to_mov(input_path: Path, output_folder: Path):
     ...
+
+
+if __name__ == "__main__":
+    main()
